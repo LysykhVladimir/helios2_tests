@@ -10,10 +10,10 @@ import org.openqa.selenium.support.FindBy;
 import ru.yandex.qatools.htmlelements.annotations.Block;
 
 @Name("Left Side Form")
-@Block(@FindBy(className = "GGTUI1GBD4C-su-ivt-helios-web-ui-panel-contentPanel-ContentPanelResources-ContentPanelCss-header"))
+@Block(@FindBy(xpath = "//div[contains(@class, 'su-ivt-helios-web-ui-panel-contentPanel-ContentPanelResources-ContentPanelCss-header')]"))
 public class LeftSideForm extends HtmlElement{
     @Name("User name input")
-    @FindBy(css = "div.GGTUI1GBF4C-su-ivt-helios-web-ui-panel-contentPanel-ContentPanelResources-ContentPanelCss-label")
+    @FindBy(xpath = "//div[contains(@class, 'su-ivt-helios-web-ui-panel-contentPanel-ContentPanelResources-ContentPanelCss-label')]")
     private HtmlElement nameOfMenuSection;
 
     public void waitTextForNewMenuSection(HtmlElement element, String condition) {

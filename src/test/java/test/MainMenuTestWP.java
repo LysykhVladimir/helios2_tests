@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.IndexPage;
 import pages.LoginPage;
 
-public class MainMenuTest extends DriverFactory {
+public class MainMenuTestWP extends DriverFactory {
 
     //Test Data
     private static final String URL = "http://test.helios2.ivt.lan/login.html";

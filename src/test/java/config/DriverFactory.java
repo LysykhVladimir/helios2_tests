@@ -13,7 +13,6 @@ public class DriverFactory {
 
     private static List<WebDriverThread> webDriverThreadPool = Collections.synchronizedList(new ArrayList<WebDriverThread>());
     private static ThreadLocal<WebDriverThread> driverThread;
-    //protected LoginPage loginPage;
 
     @BeforeSuite
     public static void instantiateDriverObject() {

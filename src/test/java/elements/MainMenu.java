@@ -6,7 +6,8 @@ import ru.yandex.qatools.htmlelements.element.HtmlElement;
 import ru.yandex.qatools.htmlelements.element.Button;
 
 @Name("Main menu")
-@Block(@FindBy(className = "GGTUI1GBNBE-su-ivt-helios-web-ui-layout-LayoutView_LayoutUiBinderImpl_GenCss_style-header"))
+
+@Block(@FindBy(xpath = "//div[contains(@class, 'ivt-helios-web-ui-layout-LayoutView_LayoutUiBinderImpl_GenCss_style-header')]"))
 public class MainMenu extends HtmlElement{
     @Name("Watch select")
     @FindBy(name = "watch")
@@ -65,7 +66,7 @@ public class MainMenu extends HtmlElement{
     private Button lightSensorsButton;
 
     @Name("User name")
-    @FindBy(css = "span.GGTUI1GBG5C-su-ivt-helios-web-ui-profile-resources-UserProfileResources-Style-name")
+    @FindBy(xpath = "//span[contains(@class, 'su-ivt-helios-web-ui-profile-resources-UserProfileResources-Style-name')]")
     private HtmlElement user_name;
 
 
