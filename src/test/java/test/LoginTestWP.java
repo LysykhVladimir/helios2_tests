@@ -1,5 +1,6 @@
 package test;
 import config.DriverFactory;
+import config.ExcelDataConfig;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -10,15 +11,22 @@ public class LoginTestWP extends DriverFactory {
 
     //Test Data
     @DataProvider
-    public  Object[][] testData() {
-        return new Object[][] {
-                new Object[] {"http://test.helios2.ivt.lan/login.html", "lysykh87", "lysykh87", "Vladimir Lysykh"},
-                new Object[] {"http://test3.helios2.ivt.lan/login.html", "lysykh87", "lysykh87", "Владимир Лысых"},
-                new Object[] {"http://gw.helios2.ivt.lan/login.html", "lysykh_vv", "lysykh87", "Владимир Лысых"},
-        };
+    public Object[][] testData() {
+        ExcelDataConfig config = new ExcelDataConfig("src/test/java/test/testData/LoginTestData.xlsx");
+
+        int rows = config.getRowCount(0);
+        Object[][] arrayObject = new Object[rows][4];
+
+        for (int i=0; i<rows; i++) {
+            arrayObject[i][0]=config.getData(0,i,0);
+            arrayObject[i][1]=config.getData(0,i,1);
+            arrayObject[i][2]=config.getData(0,i,2);
+            arrayObject[i][3]=config.getData(0,i,3);
+        }
+        return arrayObject;
     }
 
-    @Test(dataProvider = "testData", groups = "login test")
+    @Test(dataProvider = "testData", groups = "loginTest")
     public void logInToWebsite(String url, String login, String password, String user_name) throws Exception {
         getDriver().get(url);
 

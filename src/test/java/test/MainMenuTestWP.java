@@ -22,98 +22,98 @@ public class MainMenuTestWP extends DriverFactory {
                 .login();
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectReports() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToReportPage();
         indexPage.waitTextInElement("ОТЧЕТЫ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectMonitoring() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToMonitoringPage();
         indexPage.waitTextInElement("НАБЛЮДЕНИЕ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectEvent() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToEventPage();
         indexPage.waitTextInElement("СОБЫТИЯ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectInventory() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToInventoryPage();
         indexPage.waitTextInElement("ИНВЕНТАРИЗАЦИЯ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectLightBoxLogs() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToLightBoxLogsPage();
         indexPage.waitTextInElement("ЛОГИ УСТРОЙСТВ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectLightSensor() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToLightSensorsPage();
         indexPage.waitTextInElement("ДАТЧИКИ ОСВЕЩЕННОСТИ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectMap() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToMapPage();
         indexPage.waitTextInElement("КАРТА");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectObjects() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToObjectsPage();
         indexPage.waitTextInElement("ОБЪЕКТЫ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectSchedule() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToSchedulePage();
         indexPage.waitTextInElement("РАСПИСАНИЕ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectService() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToServicePage();
         indexPage.waitTextInElement("ОБСЛУЖИВАНИЕ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectSettings() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToSettingsPage();
         indexPage.waitTextInElement("НАСТРОЙКИ СИСТЕМЫ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectTask() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToTaskPage();
         indexPage.waitTextInElement("ЗАДАЧИ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectUserLogs() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToUserLogsPage();
         indexPage.waitTextInElement("ДЕЙСТВИЯ ПОЛЬЗОВАТЕЛЕЙ");
     }
 
-    @Test
+    @Test(groups = "menuTest")
     public void selectUsers() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToUsersPage();
