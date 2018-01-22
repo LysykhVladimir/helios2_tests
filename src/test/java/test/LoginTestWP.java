@@ -13,17 +13,7 @@ public class LoginTestWP extends DriverFactory {
     @DataProvider
     public Object[][] testData() {
         ExcelDataConfig config = new ExcelDataConfig("src/test/java/test/testData/LoginTestData.xlsx");
-
-        int rows = config.getRowCount(0);
-        Object[][] arrayObject = new Object[rows][4];
-
-        for (int i=0; i<rows; i++) {
-            arrayObject[i][0]=config.getData(0,i,0);
-            arrayObject[i][1]=config.getData(0,i,1);
-            arrayObject[i][2]=config.getData(0,i,2);
-            arrayObject[i][3]=config.getData(0,i,3);
-        }
-        return arrayObject;
+        return config.getDataFromExcel();
     }
 
     @Test(dataProvider = "testData", groups = "loginTest")
