@@ -4,7 +4,7 @@
     <test name="Тестирование логирования" >
         <groups>
             <run>
-            <!--<exclude name="loginTest"/>-->
+            <exclude name="loginTest"/>
             </run>
         </groups>
         <classes>

@@ -49,7 +49,6 @@ public class ExcelDataConfig {
         return row;
     }
 
-
     public int countNonEmptyColumns(int sheetIndex) {
         XSSFRow firstRow = wb.getSheetAt(sheetIndex).getRow(0);
         return firstEmptyCellPosition(firstRow);
@@ -65,5 +64,4 @@ public class ExcelDataConfig {
         }
         return columnCount;
     }
-
 }

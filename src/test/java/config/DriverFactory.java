@@ -29,10 +29,10 @@ public class DriverFactory {
         return driverThread.get().getDriver();
     }
 
-    @AfterMethod
-    public static void clearCookies() throws Exception {
-        getDriver().manage().deleteAllCookies();
-    }
+//    @AfterMethod
+//    public static void clearCookies() throws Exception {
+//        getDriver().manage().deleteAllCookies();
+//    }
 
     @AfterSuite
     public static void closeDriverObjects() {

@@ -27,55 +27,8 @@ public class MainMenuTestWP extends DriverFactory {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToReportPage();
         indexPage.waitTextInElement("ОТЧЕТЫ");
-    }
+        indexPage.waitHierarchyRoot();
 
-    @Test(groups = "menuTest")
-    public void selectMonitoring() throws Exception {
-        IndexPage indexPage = new IndexPage();
-        indexPage.mainMenu.goToMonitoringPage();
-        indexPage.waitTextInElement("НАБЛЮДЕНИЕ");
-    }
-
-    @Test(groups = "menuTest")
-    public void selectEvent() throws Exception {
-        IndexPage indexPage = new IndexPage();
-        indexPage.mainMenu.goToEventPage();
-        indexPage.waitTextInElement("СОБЫТИЯ");
-    }
-
-    @Test(groups = "menuTest")
-    public void selectInventory() throws Exception {
-        IndexPage indexPage = new IndexPage();
-        indexPage.mainMenu.goToInventoryPage();
-        indexPage.waitTextInElement("ИНВЕНТАРИЗАЦИЯ");
-    }
-
-    @Test(groups = "menuTest")
-    public void selectLightBoxLogs() throws Exception {
-        IndexPage indexPage = new IndexPage();
-        indexPage.mainMenu.goToLightBoxLogsPage();
-        indexPage.waitTextInElement("ЛОГИ УСТРОЙСТВ");
-    }
-
-    @Test(groups = "menuTest")
-    public void selectLightSensor() throws Exception {
-        IndexPage indexPage = new IndexPage();
-        indexPage.mainMenu.goToLightSensorsPage();
-        indexPage.waitTextInElement("ДАТЧИКИ ОСВЕЩЕННОСТИ");
-    }
-
-    @Test(groups = "menuTest")
-    public void selectMap() throws Exception {
-        IndexPage indexPage = new IndexPage();
-        indexPage.mainMenu.goToMapPage();
-        indexPage.waitTextInElement("КАРТА");
-    }
-
-    @Test(groups = "menuTest")
-    public void selectObjects() throws Exception {
-        IndexPage indexPage = new IndexPage();
-        indexPage.mainMenu.goToObjectsPage();
-        indexPage.waitTextInElement("ОБЪЕКТЫ");
     }
 
     @Test(groups = "menuTest")
@@ -83,13 +36,22 @@ public class MainMenuTestWP extends DriverFactory {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToSchedulePage();
         indexPage.waitTextInElement("РАСПИСАНИЕ");
+        indexPage.waitHierarchyRoot();
     }
 
+    @Test(groups = "menuTest")
+    public void selectInventory() throws Exception {
+        IndexPage indexPage = new IndexPage();
+        indexPage.mainMenu.goToInventoryPage();
+        indexPage.waitTextInElement("ИНВЕНТАРИЗАЦИЯ");
+        indexPage.waitHierarchyRoot();
+    }
     @Test(groups = "menuTest")
     public void selectService() throws Exception {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToServicePage();
         indexPage.waitTextInElement("ОБСЛУЖИВАНИЕ");
+        indexPage.waitHierarchyRoot();
     }
 
     @Test(groups = "menuTest")
@@ -97,6 +59,58 @@ public class MainMenuTestWP extends DriverFactory {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToSettingsPage();
         indexPage.waitTextInElement("НАСТРОЙКИ СИСТЕМЫ");
+        //indexPage.waitHierarchyRoot();
+    }
+
+    @Test(groups = "menuTest")
+    public void selectMonitoring() throws Exception {
+        IndexPage indexPage = new IndexPage();
+        indexPage.mainMenu.goToMonitoringPage();
+        indexPage.waitTextInElement("НАБЛЮДЕНИЕ");
+        indexPage.waitHierarchyRoot();
+    }
+
+    @Test(groups = "menuTest")
+    public void selectEvent() throws Exception {
+        IndexPage indexPage = new IndexPage();
+        indexPage.mainMenu.goToEventPage();
+        indexPage.waitTextInElement("СОБЫТИЯ");
+        indexPage.waitHierarchyRoot();
+    }
+
+    @Test(groups = "menuTest")
+    public void selectLightBoxLogs() throws Exception {
+        IndexPage indexPage = new IndexPage();
+        indexPage.mainMenu.goToLightBoxLogsPage();
+        indexPage.waitTextInElement("ЛОГИ УСТРОЙСТВ");
+        indexPage.waitHierarchyRoot();
+    }
+
+    @Test(groups = "menuTest")
+    public void selectLightSensor() throws Exception {
+        IndexPage indexPage = new IndexPage();
+        indexPage.mainMenu.goToLightSensorsPage();
+        indexPage.waitTextInElement("ДАТЧИКИ ОСВЕЩЕННОСТИ");
+        indexPage.waitHierarchyRoot();
+
+    }
+
+    @Test(groups = "menuTest")
+    public void selectMap() throws Exception {
+        IndexPage indexPage = new IndexPage();
+        indexPage.mainMenu.goToMapPage();
+        indexPage.waitTextInElement("КАРТА");
+        indexPage.waitHierarchyRoot();
+
+    }
+
+    @Test(groups = "menuTest")
+    public void selectObjects() throws Exception {
+        IndexPage indexPage = new IndexPage();
+        indexPage.mainMenu.goToObjectsPage();
+        indexPage.waitTextInElement("ОБЪЕКТЫ");
+        indexPage.waitHierarchyRoot();
+
     }
 
     @Test(groups = "menuTest")
@@ -104,6 +118,8 @@ public class MainMenuTestWP extends DriverFactory {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToTaskPage();
         indexPage.waitTextInElement("ЗАДАЧИ");
+        indexPage.waitHierarchyRoot();
+
     }
 
     @Test(groups = "menuTest")
@@ -111,6 +127,7 @@ public class MainMenuTestWP extends DriverFactory {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToUserLogsPage();
         indexPage.waitTextInElement("ДЕЙСТВИЯ ПОЛЬЗОВАТЕЛЕЙ");
+        indexPage.waitHierarchyRoot();
     }
 
     @Test(groups = "menuTest")
@@ -118,5 +135,7 @@ public class MainMenuTestWP extends DriverFactory {
         IndexPage indexPage = new IndexPage();
         indexPage.mainMenu.goToUsersPage();
         indexPage.waitTextInElement("ПОЛЬЗОВАТЕЛИ И РОЛИ");
+        indexPage.waitHierarchyRoot();
+
     }
 }

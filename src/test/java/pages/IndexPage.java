@@ -16,4 +16,8 @@ public class IndexPage extends DriverFactory {
     public void waitTextInElement(String condition){
         leftSideForm.waitTextForNewMenuSection(leftSideForm.getNameOfMenuSection(),condition);
     }
+
+    public void waitHierarchyRoot() throws Exception {
+        leftSideForm.waitForHierarchyRoot(leftSideForm.getHierarchyRoot());
+    }
 }
